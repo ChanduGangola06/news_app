@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 29.sp,
             color: const Color(0xffffffff),
             fontFamily: 'Roboto Slab',
+            fontWeight: FontWeight.w400,
           ),
         ),
         centerTitle: true,
