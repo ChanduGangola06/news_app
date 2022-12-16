@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:news_app/Widgets/news_list_item.dart';
 import 'package:news_app/blocs/Internet/internet_bloc_bloc.dart';
 import 'package:news_app/blocs/News/news_bloc_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,13 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: const Color(0xff464646),
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text(
+        backgroundColor: const Color(0xff000000),
+        title: Text(
           'HEADLINE',
           style: TextStyle(
-            fontSize: 29,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+            fontSize: 29.sp,
+            color: const Color(0xffffffff),
+            fontFamily: 'Roboto Slab',
           ),
         ),
         centerTitle: true,

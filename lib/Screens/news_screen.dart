@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/news_data_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NewsScreen extends StatelessWidget {
   final News news;
@@ -14,7 +15,7 @@ class NewsScreen extends StatelessWidget {
             children: [
               Positioned(
                 child: Container(
-                  height: double.infinity / 2,
+                  height: double.infinity,
                   width: double.infinity,
                   foregroundDecoration: BoxDecoration(
                     image: DecorationImage(
@@ -57,25 +58,25 @@ class NewsScreen extends StatelessWidget {
               ),
               Positioned(
                 top: 300,
-                left: 30,
-                right: 30,
+                left: 24,
+                right: 20,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       news.title ?? 'title',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4!
-                          .copyWith(color: Colors.white),
+                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                          color: const Color(0xfff2f2f2),
+                          fontSize: 29.sp,
+                          fontFamily: 'Roboto Slab'),
                       maxLines: 5,
                     ),
                   ],
                 ),
               ),
               Positioned(
-                bottom: 10,
-                left: 30,
+                bottom: 64,
+                left: 24,
                 right: 30,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -85,23 +86,32 @@ class NewsScreen extends StatelessWidget {
                       children: [
                         Text(
                           news.source ?? 'source',
-                          style: Theme.of(context).textTheme.titleLarge,
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            color: const Color(0xfff2f2f2),
+                            fontFamily: 'Roboto Slab',
+                          ),
                         ),
                         Text(
                           news.publishedDate?.substring(0, 10) ?? 'date',
-                          style:
-                              Theme.of(context).textTheme.titleLarge!.copyWith(
-                                    color: Colors.white70,
-                                  ),
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            color: const Color(0xfff2f2f2),
+                            fontFamily: 'Roboto Slab',
+                          ),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 16,
                     ),
                     Text(
                       news.description ?? 'description',
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        color: const Color(0xffbababa),
+                        fontFamily: 'Roboto Slab',
+                      ),
                       maxLines: 4,
                     ),
                   ],

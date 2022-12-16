@@ -55,6 +55,7 @@ class MyApp extends StatelessWidget {
             themeMode: ThemeMode.light,
             darkTheme: ThemeData.dark(),
             theme: ThemeData(
+              
               // primarySwatch: Colors.grey,
               appBarTheme: const AppBarTheme(color: Colors.black87),
               primaryColor: Colors.grey,
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
                 subtitle2: TextStyle(color: Colors.white.withOpacity(0.4)),
                 caption: TextStyle(color: Colors.white.withOpacity(0.7)),
               ),
+              fontFamily: 'Roboto Slab',
             ),
             // home: const MyHomePage(),
 

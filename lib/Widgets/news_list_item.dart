@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/news_data_model.dart';
 import 'package:news_app/Screens/news_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NewsListItem extends StatelessWidget {
   final News news;
@@ -72,26 +73,30 @@ class NewsListItem extends StatelessWidget {
                       children: [
                         Text(
                           news.title ?? 'title',
-                          style: const TextStyle(
-                              color: Color(0xfff2f2f2),
-                              fontSize: 20,
-                              fontFamily: 'RobotoSlab-Regular'),
+                          style: TextStyle(
+                              color: const Color(0xfff2f2f2),
+                              fontSize: 20.sp,
+                              fontFamily: 'Roboto Slab'),
                         ),
                         const SizedBox(height: 12),
                         Row(
                           children: [
                             Text(
                               news.source ?? 'source',
-                              style: const TextStyle(
-                                color: Colors.white,
+                              style: TextStyle(
+                                fontFamily: 'Roboto Slab',
+                                fontSize: 12.sp,
+                                color: Color(0xffbababa),
                               ),
                             ),
                             const SizedBox(width: 20),
                             Text(
                               news.publishedDate?.substring(0, 10) ??
                                   'publishedDate',
-                              style: const TextStyle(
-                                color: Colors.white,
+                              style: TextStyle(
+                                fontFamily: 'Roboto Slab',
+                                fontSize: 12.sp,
+                                color: Color(0xffbababa),
                               ),
                             ),
                           ],
