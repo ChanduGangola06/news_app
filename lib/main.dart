@@ -39,39 +39,15 @@ class MyApp extends StatelessWidget {
           create: (context) => InternetBloc(),
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            // builder: (context, widget) {
-            //   return ResponsiveWrapper.builder(
-            //     BouncingScrollWrapper.builder(context, widget!),
-            //     defaultScale: true,
-            //     breakpoints: [
-            //       const ResponsiveBreakpoint.resize(600, name: MOBILE),
-            //       const ResponsiveBreakpoint.autoScale(700, name: TABLET),
-            //       const ResponsiveBreakpoint.resize(800, name: DESKTOP),
-            //       const ResponsiveBreakpoint.autoScale(1700, name: "4K"),
-            //     ],
-            //   );
-            // },
             title: 'Flutter Demo',
             themeMode: ThemeMode.light,
             darkTheme: ThemeData.dark(),
             theme: ThemeData(
-              
-              // primarySwatch: Colors.grey,
               appBarTheme: const AppBarTheme(color: Colors.black87),
               primaryColor: Colors.grey,
               canvasColor: Colors.grey[700],
-              textTheme: TextTheme(
-                bodyText1: TextStyle(color: Colors.white.withOpacity(0.7)),
-                bodyText2: TextStyle(color: Colors.white.withOpacity(0.8)),
-                headline6: TextStyle(color: Colors.white.withOpacity(0.9)),
-                headline3: TextStyle(color: Colors.white.withOpacity(0.9)),
-                subtitle2: TextStyle(color: Colors.white.withOpacity(0.4)),
-                caption: TextStyle(color: Colors.white.withOpacity(0.7)),
-              ),
               fontFamily: 'Roboto Slab',
             ),
-            // home: const MyHomePage(),
-
             home: child,
           ),
         );
